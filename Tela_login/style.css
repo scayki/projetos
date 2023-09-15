@@ -1,0 +1,127 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500&display=swap');
+/* Define as propriedades de todos os elementos da página*/
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+/* inclui o preenchimento e a borda na largura e na altura*/
+
+font-family: 'Open Sans' sans-serif;
+}
+
+body{
+    background-color: #2d528a;
+    min-height: 100vh;
+    /* altura mínima do elemento*/
+    /* vh é uma medida que se baseia no tamanho da tela. vh = height, vw = width*/
+    display: flex;
+    /* tornar um elemento flex faz todos os seus filhos ficarem flex também*/
+    /* Torna possível alinhar os itens dentro do elemento em uma direção*/
+    align-items: center;
+    /* alinha os flex itens de acordo com o eixo do container ALINHA VERTICALMENTE*/
+    justify-content: center;
+    /* alinha os flex itens no container de acordo com a direção. ALINHA HORIZONTALMENTE*/
+}
+
+form{
+    background-color: white;
+    border-radius: 10px;
+    max-width: 500px;
+    padding: 50px 40px;
+    box-shadow: 2px 2px 15px;
+    
+}
+
+form h1{
+    text-align: center;
+     margin: 48px 0px;
+     font-size: 36px;
+     color: #111;
+}
+
+.container{
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.container input{
+    width: 100%;
+
+    height: 70px;
+
+    border: none;
+    background-color: #ededed;
+
+    border-radius: 4px;
+
+    color: #333;
+
+    font-size: 18px;
+    font-weight: 700;
+    /* a largura da fonte varia de 100 até 900 pulando de 100 em 100*/
+
+    padding: 14px 60px 0 10px;
+}
+label{
+    text-transform: uppercase;
+    /* Deixa as letras maiúsculas*/
+    font-size: 14px;
+    font-weight: 700;
+    color: #9d9d9d;
+    position: absolute;
+    /* faz os elementos sairem do fluxo da página, isto é, a propriedade agora pode ser colocada em qualquer lugar*/
+    line-height: 70px;
+    top: 0;
+    left: 20px;
+    /* as propriedades top, left, rigth e bottom só funcionam quando a posição do elemento for absoluta*/
+    user-select: none;
+    /* impede a seleção do texto*/
+    pointer-events: none;
+    /* bloqueia os eventos de ponteiro e mouse*/
+    transition: 0.2s ;
+    /* controla o tempo em que os elementos serão alterados*/
+}
+
+.container input:focus ~ label,
+.container input:valid ~label{
+    left: 10px;
+    top: -16px;
+    color: #00acd7;
+}
+button{
+    display: block;
+    /* não permite outros elementos ao lado exceto quando ele tiver a propriedade float*/
+    float: right;
+    width: 50%;
+    height: 70px;
+    margin: 40px auto;
+    background-color: #00acd7;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    /* muda o cursor do mouse ao passar sobre o elemento*/
+    transition: 0.2s linear;
+    /* linear faz a transição de volta do elemento também*/
+}
+button:hover{
+    opacity: 0.85;
+    /* altera a opacidade onde 1 é visí el e 0 e invisível*/
+}
+form a{
+    clear: both;
+    /* retitra a propriedade float aplicada no elemento anterior*/
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+form a:hover{
+    color: #111;
+}
