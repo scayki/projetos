@@ -20,10 +20,20 @@ body{
     /* Torna possível alinhar os itens dentro do elemento em uma direção*/
     align-items: center;
     /* alinha os flex itens de acordo com o eixo do container ALINHA VERTICALMENTE*/
-    justify-content: center;
+    justify-content: right;
     /* alinha os flex itens no container de acordo com a direção. ALINHA HORIZONTALMENTE*/
+    margin-right: 150px;
 }
 
+.container2{
+    width: 200px;
+    background-color: white;
+    
+}
+.container2 > img{
+    position: relative;
+    width: 300px;
+}
 form{
     background-color: white;
     border-radius: 10px;
