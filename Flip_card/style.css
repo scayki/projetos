@@ -43,4 +43,5 @@
 }
 .flipcard .flipcardback{
     transform: rotateY(180deg);
+    
 }
